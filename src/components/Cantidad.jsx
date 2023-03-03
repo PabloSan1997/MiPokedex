@@ -1,5 +1,6 @@
 import React from 'react'
 import { useMiContexto } from '../context';
+import "../styles/cantidad.css";
 
 function Cantidad() {
     const {setCantidad, cantidad}=useMiContexto();
@@ -11,19 +12,18 @@ function Cantidad() {
     }
 
   return (
-   <form onSubmit={sumbit}>
+   <form onSubmit={sumbit} className="formulario">
         <div className="entradas">
-            <label htmlFor="#entrada1">{"Cantidad de pokemons (maximo: )"}</label>
             <input 
             type="number"  
             id="entrada1" 
             placeholder='Cantidad...' 
-            min="0" 
+            min="1" 
             max="1279"
             onChange={(e)=>setCambiar(e.target.value)}
             />
         </div>
-        <button type='submit'>Actualizar</button>
+        <button type='submit' className='boton'>Actualizar</button>
    </form>
   )
 }

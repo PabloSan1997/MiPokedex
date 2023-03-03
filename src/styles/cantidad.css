@@ -1,0 +1,40 @@
+.formulario{
+    width:30%;
+    height: 80%;
+    display: flex;
+    margin:  auto;
+}
+.formulario .entradas{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: auto 10px auto auto;
+}
+.formulario .entradas input{
+    margin: auto auto 1% auto;
+    width: 100%;
+    border: 1px solid black;
+    outline: none;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+
+.formulario .boton{
+    margin: auto auto 2px 15px;
+    font-size: 1.3rem;
+    padding: 1px 5px;
+    border: 2px solid var(--color1);
+    border-radius: 10px;
+    background: var(--color2);
+    cursor: pointer;
+}
+.formulario .boton:hover{
+    background: var(--color1);
+    color: var(--color2);
+}
+.formulario .boton:active{
+    background: var(--color2);
+    color: var(--color1);
+}

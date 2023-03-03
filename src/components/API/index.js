@@ -3,7 +3,7 @@ import React from "react";
 
 function useApi() {
   const [cantidad, setCantidad] = React.useState(20);
-  const [datos, setDatos] = React.useState([]);
+  const [datoss, setDatoss] = React.useState([]);
   React.useEffect(() => {
     setTimeout(async () => {
       try {
@@ -16,12 +16,12 @@ function useApi() {
             return{ ...elemento, ...hola.data};
           })
         );
-        setDatos(masInfo);
+        setDatoss(masInfo);
       } catch (error) {
-        setDatos([]);
+        setDatoss([]);
       }
     }, 100);
   }, [cantidad]);
-  return { datos, cantidad, setCantidad };
+  return { datoss, cantidad, setCantidad };
 }
 export { useApi };

@@ -1,0 +1,33 @@
+.contenedorLista{
+    width: 95%;
+    margin:20px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.contenedorLista .caja{
+    height: 200px;
+    width: 23%;
+    min-width: 200px;
+    margin: auto auto 10px auto;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--color1);
+    border-radius: 10px;
+}
+.contenedorLista .caja:hover{
+    background: rgb(223, 200, 200);
+    cursor: pointer;
+}
+.contenedorLista .caja .imagen{
+    max-width: 90%;
+    min-width: 70%;
+    max-height: 80%;
+    margin: auto;
+}
+.contenedorLista .caja p{
+    margin: auto;
+    font-family: arial;
+    font-size: 1.5rem;
+    color: rgb(104, 6, 6);
+    font-weight: bold;
+}

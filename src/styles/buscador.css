@@ -1,0 +1,30 @@
+.buscador {
+  width: 40%;
+  height: fit-content;
+  margin: auto auto 1% auto;
+  display: flex;
+}
+.buscador input {
+  border: 1px solid black;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  padding: 2px 5px;
+  width: 80%;
+}
+.buscador button{
+    font-size: 1.3rem;
+    padding: 1px 5px;
+    border: 2px solid var(--color1);
+    border-radius: 10px;
+    background: var(--color2);
+    cursor: pointer;
+    margin-left: 10px;
+}
+.buscador button:hover{
+    background: var(--color1);
+    color: var(--color2);
+}
+.buscador button:active{
+    background: var(--color2);
+    color: var(--color1);
+}

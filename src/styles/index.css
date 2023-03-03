@@ -4,7 +4,13 @@
 }
 :root{
     --color1:rgb(5, 0, 12);
+    --color2:rgb(253, 221, 221);
 }
 body{
     background: rgb(245, 238, 238);
+}
+.areaentradas{
+    width: 100%;
+    height: 100px;
+    display: flex;
 }
