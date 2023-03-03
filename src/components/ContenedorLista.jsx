@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import { useMiContexto } from '../context';
 import "../styles/contenedorLista.css";
 
@@ -19,13 +20,17 @@ function ContenedorLista() {
 }
 
 function Caja({nombre, imagen}){
+  const navegar = useNavigate();
+const ir = () =>{
+  navegar(`/pokemon/${nombre}`);
+}
 const nombreBien=()=>{
   let elnombre = nombre.split('');
   elnombre[0]=elnombre[0].toLocaleUpperCase();
   return elnombre.join('');
 }
   return(
-    <div className="caja">
+    <div className="caja" onClick={ir}>
       <img src={imagen} alt="" className="imagen" />
       <p className="nombre">{nombreBien()}</p>
     </div>
