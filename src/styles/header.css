@@ -1,0 +1,20 @@
+header{
+    display: flex;
+    background: var(--color1);
+    height: 120px;
+
+}
+header h1{
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}
+header h1 img{
+    width: 350px;
+}
+header p{
+    font-family: arial;
+    color: white;
+    margin: auto;
+    font-size: 1.5rem;
+}

@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --color1:rgb(5, 0, 12);
+}
+body{
+    background: rgb(245, 238, 238);
+}
