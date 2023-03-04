@@ -5,7 +5,7 @@
     flex-wrap: wrap;
 }
 .contenedorLista .caja{
-    height: 200px;
+    height: 250px;
     width: 23%;
     min-width: 200px;
     margin: auto auto 10px auto;
@@ -21,13 +21,15 @@
 .contenedorLista .caja .imagen{
     max-width: 90%;
     min-width: 70%;
-    max-height: 80%;
+    max-height: 75%;
     margin: auto;
 }
 .contenedorLista .caja p{
     margin: auto;
     font-family: arial;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: rgb(104, 6, 6);
     font-weight: bold;
+    max-width: 95%;
+    text-align: center;
 }

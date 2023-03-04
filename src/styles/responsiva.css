@@ -1,0 +1,81 @@
+
+@media(max-width:896px){
+    .contenedorLista .caja{
+        width: 30%;
+    }
+    header p{
+        font-size: 1.2rem;
+        width: 30%;
+        text-align: center;
+    }
+    .contenedorPokemon .area-descripcion .texto{
+        font-size: 1.3rem;
+    }
+}
+@media(max-width:660px){
+    header h1.tiTexto{
+        font-size: 1.5rem;
+    }
+    header h1 img{
+        width: 200px;
+    }
+    .contenedorLista .caja{
+        width: 40%;
+    }
+    .areaentradas{
+        flex-direction: column;
+        height: 200px;
+    }
+    .areaentradas .formulario{
+        width: 90%;
+        flex-direction: column;
+        margin: auto;
+        height: 50%;
+
+    }
+    .areaentradas .formulario .entradas{
+        width: 80%;
+        margin: auto;
+    }
+    .areaentradas .formulario .entradas input{
+        margin: auto;
+    }
+    .areaentradas .formulario .boton{
+        margin: auto;
+    }
+    .areaentradas .buscador{
+        width: 98%;
+        display: flex;
+        flex-direction: column;
+        height:50%;
+    }
+    .areaentradas .buscador button{
+        margin: auto;
+    }
+    .areaentradas .buscador input{
+        margin: auto;
+    }
+    .contenedorPokemon .area-descripcion .texto{
+        font-size: 1.1rem;
+        width: 50%;
+        margin: auto auto auto 40%;
+    }
+}
+@media(max-width:450px){
+    .contenedorLista .caja{
+        width: 98%;
+    }
+    .contenedorPokemon{
+        flex-direction: column;
+    }
+    .contenedorPokemon .area-descripcion{
+        width: 80%;
+        margin: auto auto 50px auto;
+    }
+    .contenedorPokemon .area-imagen{
+        width: 80%;
+    }
+    header p{
+        font-size: .8rem;
+    }
+}

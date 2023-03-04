@@ -1,0 +1,19 @@
+.cargando{
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    margin: auto auto auto 0px;
+}
+.cargando .cargar{
+    animation-name: animacion;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes animacion{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

@@ -8,6 +8,7 @@ function useApi() {
   const [loading, setLoading]=React.useState(true);
   React.useEffect(() => {
     setTimeout(async () => {
+      setLoading(true);
       try {
         const info = await axios(
           `https://pokeapi.co/api/v2/pokemon?limit=${cantidad}&offset=0`
@@ -28,6 +29,6 @@ function useApi() {
       }
     }, 100);
   }, [cantidad]);
-  return { datoss, cantidad, setCantidad, error, loading };
+  return { datoss, cantidad, setCantidad, error, loading, setLoading };
 }
 export { useApi };

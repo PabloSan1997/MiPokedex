@@ -3,7 +3,7 @@ import { useMiContexto } from '../context';
 import "../styles/cantidad.css";
 
 function Cantidad() {
-    const {setCantidad, cantidad}=useMiContexto();
+    const {setCantidad, cantidad, setLoading}=useMiContexto();
     const [cambiar, setCambiar]=React.useState(cantidad);
     const sumbit = (e)=>{
         e.preventDefault();
