@@ -3,7 +3,7 @@ import { useApi } from '../components/API';
 const Contexto = React.createContext();
 
 function Porvedor ({children}){
-    const {datoss, cantidad, setCantidad}=useApi();
+    const {datoss, cantidad, setCantidad, error, loading}=useApi();
     const [buscado, setBuscado]=React.useState('');
     let datos=datoss;
     let total = datos.length;
@@ -25,7 +25,10 @@ function Porvedor ({children}){
         cantidad,
         setCantidad,
         datos,
-        setBuscado
+        setBuscado,
+        datoss,
+        error,
+        loading
     }}
     >
         {children}

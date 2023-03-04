@@ -14,3 +14,9 @@ body{
     height: 100px;
     display: flex;
 }
+.error{
+    font-size: 1.5rem;
+    margin:40px auto auto 2%;
+    width: fit-content;
+    font-family: Arial, Helvetica, sans-serif;
+}

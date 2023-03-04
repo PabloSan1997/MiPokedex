@@ -4,6 +4,8 @@ import React from "react";
 function useApi() {
   const [cantidad, setCantidad] = React.useState(20);
   const [datoss, setDatoss] = React.useState([]);
+  const [error, setError]=React.useState(false);
+  const [loading, setLoading]=React.useState(true);
   React.useEffect(() => {
     setTimeout(async () => {
       try {
@@ -16,12 +18,16 @@ function useApi() {
             return{ ...elemento, ...hola.data};
           })
         );
+        setError(false);
+        setLoading(false);
         setDatoss(masInfo);
       } catch (error) {
         setDatoss([]);
+        setError(true);
+        setLoading(false);
       }
     }, 100);
   }, [cantidad]);
-  return { datoss, cantidad, setCantidad };
+  return { datoss, cantidad, setCantidad, error, loading };
 }
 export { useApi };

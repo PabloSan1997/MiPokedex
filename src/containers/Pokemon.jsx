@@ -1,23 +1,44 @@
 import React from 'react'
 import { Navigate, useParams } from 'react-router-dom'
+import { ContenedorPokemon } from '../components/ContenedorPokemon';
 import { Header2 } from '../components/Header2';
 import { useMiContexto } from '../context';
 
 function Pokemon() {
-    const {nombre}=useParams();
-    const {datos} = useMiContexto();
-    const dato = datos.find(elemento=>elemento.name===nombre);
-    if(!dato){
-        return <Navigate to="/home"/>
-    }else{
+    const { nombre } = useParams();
+    const { datoss, error, loading}  = useMiContexto();
+    if (datoss.length == 0) {
+        return <>
+            <Header2 nombre={nombre} />
+            {loading?(<>
+                <div className="error">Cargando...</div>
+            </>):(<>
+                {error && <p>Error al conectar con el servidor</p>}
+            </>)}
+        </>
+    } else {
+        const dato = datoss.find(elemento => elemento.name === nombre);
         return (
             <>
-            <Header2 nombre={dato.name}/>
-            <img src={dato.sprites.other.home.front_default} alt="" className="imagen" />
+                {!!dato ? (
+                    <>
+                        <Header2 nombre={dato.name} />
+                        <ContenedorPokemon 
+                        imagen={dato.sprites.other.home.front_default}
+                        altura = {dato.height/10}
+                        abilidades={dato.abilities}
+                        movimientos={dato.moves}
+                        especie={dato.species.name}
+                        tipo={dato.types}
+                        nombre={dato.name}
+                        peso={dato.weight}
+                        />
+                    </>
+                ) : <Navigate to="/home" />}
             </>
-          )
+        )
     }
- 
+
 }
 
-export {Pokemon}
+export { Pokemon }

@@ -4,13 +4,14 @@ import { Home } from './containers/Home'
 import { Pokemon } from './containers/Pokemon';
 import { Porvedor } from './context/index.jsx';
 import "./styles/index.css";
-
+import "./styles/responsiva.css";
 function App() {
   return (
     <Porvedor>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Navigate to='/home' />} />
+          <Route path='/index.html' element={<Navigate to='/home' />} />
           <Route path='/home' element={<Home />} />
           <Route path='/pokemon' element={<Navigate to='/home' />} />
           <Route path='/pokemon/:nombre' element={<Pokemon/>} />
