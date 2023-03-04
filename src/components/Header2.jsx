@@ -8,7 +8,7 @@ function Header2({nombre}) {
     const navegar=useNavigate();
     const accion =()=>{
         setBuscado('');
-        navegar('/index.html/home');
+        navegar('/MiPokedex/home');
     }
   return (
     <header>
