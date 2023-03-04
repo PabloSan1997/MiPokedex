@@ -17,7 +17,7 @@ Una aplicación web que se desarrolló con el objetivo de practicar React, React
 ```json
 "scripts": {
     "dev": "vite --port 3000 --open", 
-	...
+	//...
   },
 ```
 - Para generar un citio web estatico se necesita del siguiente comando
