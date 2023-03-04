@@ -1,8 +1,13 @@
 import axios from "axios";
 import React from "react";
-
+function leerGuardado(){
+  if(!localStorage.cantidad){
+    localStorage.cantidad=20;
+  }
+  return localStorage.cantidad;
+}
 function useApi() {
-  const [cantidad, setCantidad] = React.useState(20);
+  const [cantidad, setCantidad] = React.useState(leerGuardado());
   const [datoss, setDatoss] = React.useState([]);
   const [error, setError]=React.useState(false);
   const [loading, setLoading]=React.useState(true);
@@ -19,6 +24,7 @@ function useApi() {
             return{ ...elemento, ...hola.data};
           })
         );
+        localStorage.cantidad=cantidad;
         setError(false);
         setLoading(false);
         setDatoss(masInfo);
