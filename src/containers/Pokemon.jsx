@@ -38,7 +38,7 @@ function Pokemon() {
                             peso={dato.weight}
                         />
                     </>
-                ) : <Navigate to="/home" />}
+                ) : <Navigate to="/index.html/home" />}
             </>
         )
     }

@@ -8,7 +8,7 @@ function Header2({nombre}) {
     const navegar=useNavigate();
     const accion =()=>{
         setBuscado('');
-        navegar('/home');
+        navegar('/index.html/home');
     }
   return (
     <header>

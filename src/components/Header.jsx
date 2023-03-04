@@ -6,7 +6,7 @@ function Header() {
     const {total}=useMiContexto();
   return (
     <header>
-        <h1><img src={Logo} alt="Logo"/></h1>
+        <h1><img src={Logo} alt="Logo"/><p>Mi Pokedex</p></h1>
         <p className='registro'>Total de pokemons registrados: {total}</p>
     </header>
   )

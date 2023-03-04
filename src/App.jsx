@@ -10,11 +10,11 @@ function App() {
     <Porvedor>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Navigate to='/home' />} />
-          <Route path='/index.html' element={<Navigate to='/home' />} />
-          <Route path='/home' element={<Home />} />
-          <Route path='/pokemon' element={<Navigate to='/home' />} />
-          <Route path='/pokemon/:nombre' element={<Pokemon/>} />
+          <Route path='/' element={<Navigate to='/index.html/home' />} />
+          <Route path='/index.html' element={<Navigate to='/index.html/home'/>} />
+          <Route path='/index.html/home' element={<Home />} />
+          <Route path='/index.html/pokemon' element={<Navigate to='/index.html/home' />} />
+          <Route path='/index.html/pokemon/:nombre' element={<Pokemon/>} />
           <Route path='*' element={<p>Not Found 404</p>} />
         </Routes>
       </BrowserRouter>

@@ -1,6 +1,7 @@
 import React from 'react'
 import "../styles/contenedorpokemon.css";
 function ContenedorPokemon({imagen, altura, especie, tipo, nombre, abilidades, peso, movimientos}) {
+    console.log(imagen);
     const abilidadesfun=()=>{
       let hola =  abilidades.map(elemento=>
             nom(elemento.ability.name)
@@ -28,7 +29,7 @@ const movimientosfun=()=>{
   return (
     <div className="contenedorPokemon">
         <div className="area-imagen">
-            <img src={imagen} alt={nombre} className="imagen" />
+            {!!imagen && <img src={imagen} alt={nombre} className="imagen" />}
         </div>
         <div className="area-descripcion">
                 <div className="fila">

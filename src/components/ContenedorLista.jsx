@@ -22,7 +22,7 @@ function ContenedorLista() {
 function Caja({nombre, imagen}){
   const navegar = useNavigate();
 const ir = () =>{
-  navegar(`/pokemon/${nombre}`);
+  navegar(`/index.html/pokemon/${nombre}`);
 }
 const nombreBien=()=>{
   let elnombre = nombre.split('');
